@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backward</title>
+
+  <style>
+    body {
+        text-align: center;
+    }
+    * {
+        font-family: 'Lucida Grande', Arial, sans-serif;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        color: green;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+
+<form action="result">
+  <br>
+  <label for="name">Введите любое слово</label>
+  <br>
+  <input type="text" name="FIO">
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="Перевернуть">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="{% url 'Generator:home' %}">На домашнею страницу</a>
+<br>
+<br>
+<br>
+<div>
+
+  {% now 'l' as current_weekday %}
+  Today is {{ current_weekday.lower }}
+</div>
+<br>
+<div>
+  {% now 'H:i' %}
+</div>
+<br>
+
+</body>
+</html>

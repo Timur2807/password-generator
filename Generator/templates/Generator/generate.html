@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор</title>
+
+  <style>
+    a {
+        color: #0248fa;
+        text-decoration: none;
+    }
+    * {
+        font-family: 'Lucida Grande', Arial, sans-serif;
+    }
+    body {
+        text-align: center;
+        background: url("https://webstockreview.net/images/clipart-designs-creative-9.png") no-repeat center center;
+    }
+  </style>
+</head>
+<body>
+<form method="get">
+  <h3>Добро пожаловать в генератор паролей</h3>
+
+  <br>
+  <h4>Выберите нужные параметры пароля</h4>
+  <br>
+
+  <label for="upper" style="color: #ff001e">Верхний регистр</label>
+  <input type="checkbox" name="upper" id="upper">
+
+  <label for="lower" style="color: #ff0000">Нижний регистр</label>
+  <input type="checkbox" name="lower" id="lower">
+
+  <label for="super_symbols" style="color: darkred">Специальные символы</label>
+  <input type="checkbox" name="super_symbols" id="super_symbols">
+
+  <label for="numbers" style="color: darkred">Наличие цифр</label>
+  <input type="checkbox" name="numbers" id="numbers">
+  <br>
+  <label for="count" style="color: darkred">Количество символов в пароле</label>
+  <select name="count" id="count">
+    <option name="1" value="1">1</option>
+    <option name="2" value="2">2</option>
+    <option name="3" value="3">3</option>
+    <option name="4" value="4">4</option>
+    <option name="5" value="5">5</option>
+    <option name="6" value="6">6</option>
+    <option name="7" value="7">7</option>
+    <option name="8" value="8">8</option>
+    <option name="9" value="9">9</option>
+    <option name="10" value="10">10</option>
+    <option name="11" value="11">11</option>
+  </select>
+  <br>
+  <div class="pwd-input-length mgb40">
+    <div>Длина пароля </div>
+    <input id="pwd-input-number" type="number" min="4" max="64">
+    <input id="slider" type="range" min="4" max="64" class="range" step="1" style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.1833, rgb(0,150,161)), color-stop(0.1833,rgb(0,150,161)));">
+  </div>
+  <br/>
+  <input type="submit" value="Генерировать">
+  <br/>
+  <p><b>{{ password }}</b></p>
+  <br/>
+</form>
+
+</body>
+
+<br>
+
+<a href="{% url 'Generator:home'%}">Назад к домашней странице</a>
+</html>

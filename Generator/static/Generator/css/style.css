@@ -1,0 +1,28 @@
+html, body {
+    text-align: center;
+    margin: 10px 230px;
+    padding: 0px;
+}
+
+* {
+    font-family: 'Lucida Grande', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+header {
+    text-align: center;
+    background-color: lightgreen;
+    width: 100px;
+    height: 10px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #fa0202;
+}

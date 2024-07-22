@@ -1,0 +1,39 @@
+{% extends 'Generator/base.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+
+
+{% block body %}
+  <style>
+
+      .name {
+          text-align: center;
+      }
+      body {
+          background: url("https://psicologiablog1.files.wordpress.com/2017/04/cropped-psicologc3ada-emocional-y-el-mapa-de-empatc3ada-texto1.png") no-repeat center center;
+          background-size: auto;
+      }
+      a {
+          text-decoration: none;
+      }
+      a:hover {
+          text-decoration: underline;
+          color: green;
+      }
+  </style>
+  <h1 class="name" style="color: #0736f8">Привет {{ name }}</h1>
+  <br>
+  <h3 class="name" style="color: #8b0019">"Это моя домашняя страница"</h3>
+  <br>
+  <a href="{% url 'Generator:about' %}">Администратор</a>
+  <br>
+  <br>
+  <a href="{% url 'Generator:generate' %}">Генератор паролей</a>
+  <br>
+  <br>
+  <br>
+  <a href="{% url 'Generator:backward' %}">Читалка</a>
+{% endblock %}
